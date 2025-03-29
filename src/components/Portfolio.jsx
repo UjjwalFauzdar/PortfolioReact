@@ -98,7 +98,7 @@ const Portfolio = () => {
           <div className="hover-items">
             <h3>Portfolio Website</h3>
             <div className="icons">
-              <a href="https://github.com/UjjwalFauzdar/Portfolio" className="icon" target="_blank" rel="noreferrer">
+              <a href="https://github.com/UjjwalFauzdar/PortfolioReact" className="icon" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon="fa-brands fa-github" />
               </a>
             </div>
