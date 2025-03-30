@@ -23,7 +23,7 @@ const Contact = () => {
                   <FontAwesomeIcon icon="fa-solid fa-envelope" />
                   <span>Email</span>
                 </div>
-                <p>: ujjwalfauzdar3937@gmail.com</p>
+                <p>: fauzdarujjwal@gmail.com</p>
               </div>
               <div className="contact-item">
                 <div className="icon">
@@ -52,7 +52,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="user-contact">
-            <form action="mailto:ujjwalfauzdar3937@gmail.com" method="post" encType="text/plain" className="contact-form">
+            <form action="mailto:fauzdarujjwal@gmail.com" method="post" encType="text/plain" className="contact-form">
               <div className="input-control i-c-2">
                 <input type="text" name="name" placeholder="YOUR NAME" required />
                 <input type="email" name="email" placeholder="YOUR EMAIL" required />
