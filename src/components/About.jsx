@@ -31,6 +31,7 @@ const About = () => {
             </a>
           </div>
         </div>
+        
         <div className="right-about">
           <div className="about-stats">
             <h4 className="stat-title">My Skills</h4>
