@@ -36,12 +36,14 @@ const About = () => {
             <h4 className="stat-title">My Skills</h4>
             <div className="progress-bars">
               {[
-                { skill: 'html', percent: 80 },
-                { skill: 'css', percent: 75 },
+                { skill: 'Java', percent: 80 },
+                { skill: 'SpringBoot', percent: 70 },
                 { skill: 'MySQL', percent: 70 },
                 { skill: 'ReactJS', percent: 65 },
-                { skill: 'Java', percent: 80 },
-                { skill: 'SpringBoot', percent: 70 }
+                { skill: 'html', percent: 80 },
+                { skill: 'css', percent: 75 },
+                { skill: 'Js', percent: 70 },
+                { skill: 'DSA', percent: 70 }
               ].map((item, index) => (
                 <div className="progress-bar" key={index}>
                   <p className="prog-title">{item.skill}</p>
