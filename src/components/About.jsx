@@ -11,14 +11,14 @@ const About = () => {
         <div className="left-about">
           <h4>Information About me</h4>
           <p>
-            I'm a 21yr old currently pursuing my graduate degree in B.Tech with Information Technology
+            I have recently completed my graduate degree in B.Tech with Information Technology
             from Ajay Kumar Garg Engineering College. I have strong knowledge of
-            Java, SpringBoot, HTML, CSS, ReactJS, and C/C++. I excel at problem solving and have a passion for continuous learning and growth. 
+            Java, SpringBoot, MySQL, HTML, CSS, ReactJS, and C/C++. I excel at problem solving and have a passion for continuous learning and growth. 
             I'm actively seeking opportunities in Web Development.
           </p>
           <div className="btn-con">
             <a 
-              href={`${process.env.PUBLIC_URL}/Ujjwal's_Resume.pdf`} 
+              href={process.env.PUBLIC_URL + "/Ujjwals_Resume.pdf"} 
               className="resume-btn" 
               download="Ujjwal_Fauzdar_Resume.pdf"
               target="_blank"
@@ -31,7 +31,6 @@ const About = () => {
             </a>
           </div>
         </div>
-        
         <div className="right-about">
           <div className="about-stats">
             <h4 className="stat-title">My Skills</h4>
@@ -39,7 +38,7 @@ const About = () => {
               {[
                 { skill: 'html', percent: 80 },
                 { skill: 'css', percent: 75 },
-                { skill: 'javascript', percent: 70 },
+                { skill: 'MySQL', percent: 70 },
                 { skill: 'ReactJS', percent: 65 },
                 { skill: 'Java', percent: 80 },
                 { skill: 'SpringBoot', percent: 70 }

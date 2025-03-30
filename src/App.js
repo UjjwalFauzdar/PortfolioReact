@@ -17,12 +17,12 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/PortfolioReact">
       <div className={`main-content ${lightMode ? 'light-mode' : ''}`}>
         <ThemeButton toggleTheme={toggleTheme} />
         <Controls />
         
-        <Routes basename="/PortfolioReact">
+        <Routes>
           <Route path="/" element={<Header />} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
