@@ -11,14 +11,14 @@ const About = () => {
         <div className="left-about">
           <h4>Information About me</h4>
           <p>
-            I'm a 21yr old currently pursuing my graduate degree in Btech with Information and technology
-            from Ajay Kumar Garg Engineering College. I have good knowledge of
-            Java, SpringBoot, HTML, CSS, ReactJs, C/C++. I am good at problem solving and have zeal to learn and grow. 
-            I am looking for opportunities in field of Web Development.
+            I'm a 21yr old currently pursuing my graduate degree in B.Tech with Information Technology
+            from Ajay Kumar Garg Engineering College. I have strong knowledge of
+            Java, SpringBoot, HTML, CSS, ReactJS, and C/C++. I excel at problem solving and have a passion for continuous learning and growth. 
+            I'm actively seeking opportunities in Web Development.
           </p>
           <div className="btn-con">
             <a 
-              href="/Ujjwal's_Resume.pdf" 
+              href={`${process.env.PUBLIC_URL}/Ujjwal's_Resume.pdf`} 
               className="resume-btn" 
               download="Ujjwal_Fauzdar_Resume.pdf"
               target="_blank"
@@ -36,107 +36,62 @@ const About = () => {
           <div className="about-stats">
             <h4 className="stat-title">My Skills</h4>
             <div className="progress-bars">
-              <div className="progress-bar">
-                <p className="prog-title">html</p>
-                <div className="progress-con">
-                  <p className="prog-text">80%</p>
-                  <div className="progress">
-                    <span className="html"></span>
+              {[
+                { skill: 'html', percent: 80 },
+                { skill: 'css', percent: 75 },
+                { skill: 'javascript', percent: 70 },
+                { skill: 'ReactJS', percent: 65 },
+                { skill: 'Java', percent: 80 },
+                { skill: 'SpringBoot', percent: 70 }
+              ].map((item, index) => (
+                <div className="progress-bar" key={index}>
+                  <p className="prog-title">{item.skill}</p>
+                  <div className="progress-con">
+                    <p className="prog-text">{item.percent}%</p>
+                    <div className="progress">
+                      <span className={item.skill.toLowerCase()}></span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="progress-bar">
-                <p className="prog-title">css</p>
-                <div className="progress-con">
-                  <p className="prog-text">75%</p>
-                  <div className="progress">
-                    <span className="css"></span>
-                  </div>
-                </div>
-              </div>
-              <div className="progress-bar">
-                <p className="prog-title">javascript</p>
-                <div className="progress-con">
-                  <p className="prog-text">70%</p>
-                  <div className="progress">
-                    <span className="js"></span>
-                  </div>
-                </div>
-              </div>
-              <div className="progress-bar">
-                <p className="prog-title">ReactJS</p>
-                <div className="progress-con">
-                  <p className="prog-text">65%</p>
-                  <div className="progress">
-                    <span className="react"></span>
-                  </div>
-                </div>
-              </div>
-              <div className="progress-bar">
-                <p className="prog-title">Java</p>
-                <div className="progress-con">
-                  <p className="prog-text">80%</p>
-                  <div className="progress">
-                    <span className="java"></span>
-                  </div>
-                </div>
-              </div>
-              <div className="progress-bar">
-                <p className="prog-title">SpringBoot</p>
-                <div className="progress-con">
-                  <p className="prog-text">70%</p>
-                  <div className="progress">
-                    <span className="springboot"></span>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
           
           <h4 className="stat-title">My Timeline</h4>
           <div className="timeline">
-            <div className="timeline-item">
-              <div className="tl-icon">
-                <FontAwesomeIcon icon="fa-solid fa-briefcase" />
+            {[
+              {
+                duration: '2017 - 2018',
+                title: 'High School',
+                subtitle: '10th',
+                institution: 'DehraDun Public School, Sanjay Nagar, Ghaziabad',
+                score: 'Percentage: 85.6'
+              },
+              {
+                duration: '2019-2020',
+                title: 'Intermediate',
+                subtitle: '12th',
+                institution: 'DehraDun Public School, Sanjay Nagar, Ghaziabad',
+                score: 'Percentage: 90'
+              },
+              {
+                duration: '2020 - 2024',
+                title: 'Graduate',
+                subtitle: 'B.Tech | IT',
+                institution: 'Ajay Kumar Garg Engineering College, Ghaziabad',
+                score: 'CGPA: 7.34'
+              }
+            ].map((item, index) => (
+              <div className="timeline-item" key={index}>
+                <div className="tl-icon">
+                  <FontAwesomeIcon icon="fa-solid fa-briefcase" />
+                </div>
+                <p className="tl-duration">{item.duration}</p>
+                <h5>{item.title}<span> - {item.subtitle}</span></h5>
+                <p>{item.institution}</p>
+                <p>{item.score}</p>
               </div>
-              <p className="tl-duration">2017 - 2018</p>
-              <h5>High School<span> - 10th</span></h5>
-              <p>DehraDun Public School, Sanjay Nagar, Ghaziabad</p>
-              <p>Percentage: 85.6</p>
-            </div>
-            <div className="timeline-item">
-              <div className="tl-icon">
-                <FontAwesomeIcon icon="fa-solid fa-briefcase" />
-              </div>
-              <p className="tl-duration">2019-2020</p>
-              <h5>Intermediate<span> - 12th</span></h5>
-              <p>DehraDun Public School, Sanjay Nagar, Ghaziabad</p>
-              <p>Percentage: 90</p>
-            </div>
-            <div className="timeline-item">
-              <div className="tl-icon">
-                <FontAwesomeIcon icon="fa-solid fa-briefcase" />
-              </div>
-              <p className="tl-duration">2020 - 2024</p>
-              <h5>Graduate<span> - B.tech.|IT</span></h5>
-              <p>Ajay Kumar Garg Engineering College, Ghaziabad</p>
-              <p>CGPA: 7.34</p>
-            </div>
-            {/* <div className="timeline-item">
-              <div className="tl-icon">
-                <FontAwesomeIcon icon="fa-solid fa-briefcase" />
-              </div> */}
-              {/* <p className="tl-duration">July,2023 - August,2023</p> */}
-              {/* <h5>Web Developer Intern<span> - Bharat Intern</span></h5>
-              <p>
-                I was provided with an educational opportunity to learn and develop
-                new skills. It provided me a hands-on learning experience, where I had the chance to apply
-                my theoretical knowledge to real-world scenarios.
-                I was provided with numerous opportunities to refine and showcase
-                my skills, enabling me to gain a deeper understanding of the industry
-                and its workings.
-              </p> */}
-            {/* </div> */}
+            ))}
           </div>
         </div>
       </div>

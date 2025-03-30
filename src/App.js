@@ -22,7 +22,7 @@ function App() {
         <ThemeButton toggleTheme={toggleTheme} />
         <Controls />
         
-        <Routes>
+        <Routes basename="/PortfolioReact">
           <Route path="/" element={<Header />} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
